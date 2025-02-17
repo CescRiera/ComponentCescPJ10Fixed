@@ -1,0 +1,90 @@
+[
+  {
+    "year": 2000,
+    "investments": [
+      { "organization": "UNESCO", "amount": 120 },
+      { "organization": "Gobierno de África", "amount": 80 },
+      { "organization": "World Bank", "amount": 150 }
+    ]
+  },
+  {
+    "year": 2001,
+    "investments": [
+      { "organization": "UNESCO", "amount": 130 },
+      { "organization": "Gobierno de África", "amount": 90 },
+      { "organization": "World Bank", "amount": 170 }
+    ]
+  },
+  {
+    "year": 2002,
+    "investments": [
+      { "organization": "UNESCO", "amount": 140 },
+      { "organization": "Gobierno de África", "amount": 100 },
+      { "organization": "World Bank", "amount": 180 }
+    ]
+  },
+  {
+    "year": 2003,
+    "investments": [
+      { "organization": "UNESCO", "amount": 150 },
+      { "organization": "Gobierno de África", "amount": 95 },
+      { "organization": "World Bank", "amount": 190 }
+    ]
+  },
+  {
+    "year": 2004,
+    "investments": [
+      { "organization": "UNESCO", "amount": 160 },
+      { "organization": "Gobierno de África", "amount": 105 },
+      { "organization": "World Bank", "amount": 200 }
+    ]
+  },
+  {
+    "year": 2005,
+    "investments": [
+      { "organization": "UNESCO", "amount": 170 },
+      { "organization": "Gobierno de África", "amount": 115 },
+      { "organization": "World Bank", "amount": 210 }
+    ]
+  },
+  {
+    "year": 2006,
+    "investments": [
+      { "organization": "UNESCO", "amount": 180 },
+      { "organization": "Gobierno de África", "amount": 120 },
+      { "organization": "World Bank", "amount": 220 }
+    ]
+  },
+  {
+    "year": 2007,
+    "investments": [
+      { "organization": "UNESCO", "amount": 190 },
+      { "organization": "Gobierno de África", "amount": 130 },
+      { "organization": "World Bank", "amount": 240 }
+    ]
+  },
+  {
+    "year": 2008,
+    "investments": [
+      { "organization": "UNESCO", "amount": 200 },
+      { "organization": "Gobierno de África", "amount": 140 },
+      { "organization": "World Bank", "amount": 250 }
+    ]
+  },
+  {
+    "year": 2009,
+    "investments": [
+      { "organization": "UNESCO", "amount": 210 },
+      { "organization": "Gobierno de África", "amount": 150 },
+      { "organization": "World Bank", "amount": 270 }
+    ]
+  },
+  {
+    "year": 2024,
+    "investments": [
+      { "organization": "UNESCO", "amount": 350 },
+      { "organization": "Gobierno de África", "amount": 250 },
+      { "organization": "World Bank", "amount": 450 }
+    ]
+  }
+]
