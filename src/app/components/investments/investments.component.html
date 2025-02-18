@@ -1,21 +1,11 @@
-<mat-toolbar color="primary" class="sticky top-0 z-50 shadow-lg">
-  <div class="container mx-auto flex justify-between items-center px-4 md:px-6 py-3">
-    <span class="text-2xl font-bold tracking-tight">🌍 Investments in Africa</span>
-    <nav class="hidden md:flex space-x-6">
-      <a class="text-sm font-medium hover:text-gray-300 transition-colors">Sectors</a>
-      <a class="text-sm font-medium hover:text-gray-300 transition-colors">Statistics</a>
-      <a class="text-sm font-medium hover:text-gray-300 transition-colors">News</a>
-    </nav>
-  </div>
-</mat-toolbar>
 
-<div class="investment-page container mx-auto px-4 md:px-6 py-8 space-y-12">
-  <!-- Sección de Introducción -->
+<div class="investment-page container mx-auto px-4 md:px-6 py-8 space-y-12 bg-[#FFFAEB]">
+  <!-- Introduction Section -->
   <section class="intro animate-fade-in">
-    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div class="bg-gradient-to-r from-[#73CCD4]/20 to-[#E59B50]/20 rounded-2xl p-8 shadow-lg border border-[#110E2F]/10">
       <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Transforming Africa Through Strategic Investments</h1>
-        <p class="text-lg text-gray-600 leading-relaxed">
+        <h1 class="text-4xl font-bold text-[#110E2F] mb-4">Transforming Africa Through Strategic Investments</h1>
+        <p class="text-lg text-[#110E2F]/90 leading-relaxed">
           Africa's economic landscape is undergoing a remarkable transformation, fueled by innovative local initiatives 
           and strategic global partnerships. Explore the dynamic investment projects shaping the continent's future.
         </p>
@@ -23,42 +13,41 @@
     </div>
   </section>
 
-  <!-- Sección de Inversiones Lideradas por Africanos -->
+  <!-- African-Led Investments -->
   <section class="investment-section">
     <div class="mb-8 flex justify-between items-center">
-      <h2 class="text-3xl font-bold text-gray-900">African-Led Initiatives</h2>
-      <button mat-stroked-button color="primary" class="hidden sm:flex">
+      <h2 class="text-3xl font-bold text-[#110E2F]">African-Led Initiatives</h2>
+      <button mat-stroked-button class="hidden sm:flex border-[#E59B50] text-[#E59B50] hover:bg-[#E59B50]/10">
         View All Projects
       </button>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <mat-card 
         *ngFor="let investment of africanInvestments"
-        class="investment-card relative overflow-hidden group transition-transform duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl"
-      >
+        class="investment-card relative overflow-hidden group transition-transform duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl  ">
         <div class="relative h-56">
           <img 
             [src]="investment.image" 
             [alt]="investment.title"
             class="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-300"
           />
-          <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <span class="absolute top-4 left-4 bg-[#FFFAEB] px-3 py-1 rounded-full text-sm font-medium text-[#110E2F] shadow-sm">
             {{ investment.category }}
           </span>
         </div>
         <mat-card-header class="p-6 pb-0">
-          <mat-card-title class="text-xl font-bold leading-snug">
+          <mat-card-title class="text-xl font-bold leading-snug text-[#110E2F]">
             {{ investment.title | investmentTitle }}
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="p-6 pt-3">
-          <p class="text-gray-600 mb-4 line-clamp-3">{{ investment.description }}</p>
-          <div class="flex items-center justify-between text-sm text-gray-500">
+          <p class="text-[#110E2F]/90 mb-4 line-clamp-3">{{ investment.description }}</p>
+          <div class="flex items-center justify-between text-sm text-[#110E2F]/80">
             <span class="flex items-center">
-              <mat-icon class="text-lg mr-1">location_on</mat-icon>
+              <mat-icon class="text-lg mr-1 text-[#73CCD4]">location_on</mat-icon>
               {{ investment.location }}
             </span>
-            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-xs font-medium">
+            <span class="bg-[#73CCD4]/20 text-[#110E2F] px-2 py-1 rounded-md text-xs font-medium">
               {{ investment.status }}
             </span>
           </div>
@@ -67,66 +56,71 @@
     </div>
   </section>
 
-  <!-- Sección de Inversiones Globales -->
+  <!-- Global Investments -->
   <section class="investment-section">
     <div class="mb-8 flex justify-between items-center">
-      <h2 class="text-3xl font-bold text-gray-900">Global Partnerships</h2>
-      <button mat-stroked-button color="primary" class="hidden sm:flex">
-        Explore Collaborations
+      <h2 class="text-3xl font-bold text-[#110E2F]">Global Investments</h2>
+      <button mat-stroked-button class="hidden sm:flex border-[#E59B50] text-[#E59B50] hover:bg-[#E59B50]/10">
+        View All Projects
       </button>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <mat-card 
         *ngFor="let investment of globalInvestments"
-        class="investment-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-      >
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-1/3">
-            <img 
-              [src]="investment.image" 
-              [alt]="investment.title"
-              class="w-full h-48 md:h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
-            />
-          </div>
-          <div class="md:w-2/3 p-6">
-            <div class="flex items-center mb-2">
-              <img [src]="investment.partnerLogo" class="h-8 w-auto mr-3" alt="partner logo">
-              <span class="text-sm font-medium text-gray-500">{{ investment.partner }}</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2">{{ investment.title | investmentTitle }}</h3>
-            <p class="text-gray-600 mb-4 line-clamp-3">{{ investment.description }}</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <mat-icon class="text-lg mr-1">monetization_on</mat-icon>
-              <span class="font-medium text-green-700">{{ investment.amount | currency }}</span>
-            </div>
-          </div>
+        class="investment-card relative overflow-hidden group transition-transform duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl ">
+        <div class="relative h-56">
+          <img 
+            [src]="investment.image" 
+            [alt]="investment.title"
+            class="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-300"
+          />
+          <span class="absolute top-4 left-4 bg-[#FFFAEB] px-3 py-1 rounded-full text-sm font-medium text-[#110E2F] shadow-sm">
+            {{ investment.category }}
+          </span>
         </div>
+        <mat-card-header class="p-6 pb-0">
+          <mat-card-title class="text-xl font-bold leading-snug text-[#110E2F]">
+            {{ investment.title | investmentTitle }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="p-6 pt-3">
+          <p class="text-[#110E2F]/90 mb-4 line-clamp-3">{{ investment.description }}</p>
+          <div class="flex items-center justify-between text-sm text-[#110E2F]/80">
+            <span class="flex items-center">
+              <mat-icon class="text-lg mr-1 text-[#73CCD4]">location_on</mat-icon>
+              {{ investment.location }}
+            </span>
+            <div class="flex items-center text-sm">
+              <mat-icon class="text-lg mr-1 text-[#E59B50]">monetization_on</mat-icon>
+              <span class="font-medium text-[#110E2F]">{{ investment.amount | currency:'USD' }}</span>
+            </div>
+          </div>
+        </mat-card-content>
       </mat-card>
     </div>
   </section>
 
-  <!-- Sección de Proyectos de Ejemplo -->
-  <section class="examples bg-gray-50 rounded-2xl p-8 shadow-inner">
-    <h3 class="text-2xl font-bold text-gray-900 mb-6">Investment Trends Analysis</h3>
-    <div class="bg-white rounded-xl p-6 shadow-md">
+  <!-- Statistics Section -->
+  <section class="examples bg-[#110E2F]/5 rounded-2xl p-8 shadow-inner">
+    <h3 class="text-2xl font-bold text-[#110E2F] mb-6">Investment Trends Analysis</h3>
       <app-investments-chart></app-investments-chart>
-    </div>
     <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="bg-white p-4 rounded-xl shadow-sm">
-        <div class="text-2xl font-bold text-blue-600">$48B+</div>
-        <div class="text-sm text-gray-500">Total Investments</div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+        <div class="text-2xl font-bold text-[#E59B50]">$48B+</div>
+        <div class="text-sm text-[#110E2F]/80">Total Investments</div>
+      
       </div>
-      <div class="bg-white p-4 rounded-xl shadow-sm">
-        <div class="text-2xl font-bold text-green-600">1.2K+</div>
-        <div class="text-sm text-gray-500">Active Projects</div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+        <div class="text-2xl font-bold text-[#73CCD4]">1.2K+</div>
+        <div class="text-sm text-[#110E2F]/80">Active Projects</div>
       </div>
-      <div class="bg-white p-4 rounded-xl shadow-sm">
-        <div class="text-2xl font-bold text-purple-600">54%</div>
-        <div class="text-sm text-gray-500">Growth Rate</div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+        <div class="text-2xl font-bold text-[#110E2F]">54%</div>
+        <div class="text-sm text-[#110E2F]/80">Growth Rate</div>
       </div>
-      <div class="bg-white p-4 rounded-xl shadow-sm">
-        <div class="text-2xl font-bold text-orange-600">38</div>
-        <div class="text-sm text-gray-500">Countries</div>
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-[#73CCD4]/20">
+        <div class="text-2xl font-bold text-[#E59B50]">38</div>
+        <div class="text-sm text-[#110E2F]/80">Countries</div>
       </div>
     </div>
   </section>

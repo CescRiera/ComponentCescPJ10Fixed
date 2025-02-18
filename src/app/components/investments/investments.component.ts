@@ -69,8 +69,8 @@ export class InvestmentsComponent implements OnInit {
     this.globalInvestments = [
       new Investment(
         "China-Africa Water Infrastructure Fund",
-        "$2.4 billion investment in trans-boundary water management systems across 12 African nations.",
-        "waterchina.jpg",
+        "$2.4 billion investment in trans-boundary water management systems across 12 African nations. Also a new irrigation system.",
+        "chinawater.jpg",
         "International Development",
         "Pan-African",
         "Active",
@@ -92,18 +92,7 @@ export class InvestmentsComponent implements OnInit {
       new Investment(
         "USAID Urban Water Program",
         "Smart water grid technologies implementation in 8 major African cities to reduce distribution losses.",
-        "assets/usa_smart_water.jpg",
-        "Urban Development",
-        "Multiple Cities",
-        "Implementation",
-        "United States Agency for International Development",
-        "usaid.png",
-        325000000
-      ),
-      new Investment(
-        "USAID Urban Water Program",
-        "Smart water grid technologies implementation in 8 major African cities to reduce distribution losses.",
-        "assets/usa_smart_water.jpg",
+        "usawater.jpg",
         "Urban Development",
         "Multiple Cities",
         "Implementation",
